@@ -40,6 +40,8 @@ namespace OaSys.API.Data
 
         public DbSet<StockTake> Stocktake { get; set; }
 
+        public DbSet<CreditApplication> CreditApplication { get; set; }
+
         public DbSet<AuditLog> AuditLog { get; set; }
 
         
