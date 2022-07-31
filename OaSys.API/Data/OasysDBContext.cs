@@ -44,6 +44,10 @@ namespace OaSys.API.Data
 
         public DbSet<AuditLog> AuditLog { get; set; }
 
+        public DbSet<SaleProduct> SaleProduct { get; set; }
+
+        public DbSet<SalesReturn> SalesReturn  { get; set; }
+
         
     }
 }
