@@ -8,7 +8,7 @@ namespace OaSys.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CreditApplicationController : ControllerBase
+    public class CreditApplicationController : Controller
     {
         private readonly OasysDBContext creditApplicationDBContext;
         public CreditApplicationController(OasysDBContext creditApplicationDBContext)
@@ -26,7 +26,7 @@ namespace OaSys.API.Controllers
 
         //Get single Employee
         [HttpGet("{id}")]
-        [ActionName("GetCustomerAccount")]
+        [ActionName("GetCreditApplication")]
         public async Task<IActionResult> GetCreditApplication(int id)
         {
             var creditApplicationType = await creditApplicationDBContext.CreditApplication.FirstOrDefaultAsync(x => x.CUSTOMER_ACCOUNT_ID == id);
@@ -39,9 +39,9 @@ namespace OaSys.API.Controllers
 
         //ad a single emplyee
         [HttpPost]
-        public async Task<IActionResult> AddCustomerAccount([FromBody] Customer_Account CreditApplication)
+        public async Task<IActionResult> AddCreditApplication([FromBody] CreditApplication CreditApplication)
         {
-            await creditApplicationDBContext.Customer_Account.AddAsync(CreditApplication);
+            await creditApplicationDBContext.CreditApplication.AddAsync(CreditApplication);
             await creditApplicationDBContext.SaveChangesAsync();
             return CreatedAtAction(nameof(GetCreditApplication), new { id = CreditApplication.CUSTOMER_ACCOUNT_ID }, CreditApplication);
         }
@@ -49,7 +49,7 @@ namespace OaSys.API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCreditApplication(int id, [FromBody] CreditApplication CreditApplication)
         {
-            var existingCreditApplication = await creditApplicationDBContext.Customer_Account.FirstOrDefaultAsync(x => x.CUSTOMER_ACCOUNT_ID == id);
+            var existingCreditApplication = await creditApplicationDBContext.CreditApplication.FirstOrDefaultAsync(x => x.CUSTOMER_ACCOUNT_ID == id);
             if (existingCreditApplication != null)
             {
                 existingCreditApplication.CUSTOMER_ACCOUNT_ID = id;

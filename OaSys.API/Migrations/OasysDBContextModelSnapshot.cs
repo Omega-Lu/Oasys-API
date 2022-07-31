@@ -41,7 +41,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("Audit_Log_ID");
 
-                    b.ToTable("AuditLog");
+                    b.ToTable("AuditLog", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.CreditApplication", b =>
@@ -81,7 +81,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("CUSTOMER_ACCOUNT_ID");
 
-                    b.ToTable("CreditApplication");
+                    b.ToTable("CreditApplication", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Customer_Account", b =>
@@ -125,7 +125,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("CUSTOMER_ACCOUNT_ID");
 
-                    b.ToTable("Customer_Account");
+                    b.ToTable("Customer_Account", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Employee", b =>
@@ -176,7 +176,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("EMPLOYEE_ID");
 
-                    b.ToTable("Employee");
+                    b.ToTable("Employee", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Employee_Type", b =>
@@ -196,7 +196,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("EMPLOYEE_TYPE_ID");
 
-                    b.ToTable("Employee_Type");
+                    b.ToTable("Employee_Type", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Order", b =>
@@ -222,7 +222,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("ORDER_ID");
 
-                    b.ToTable("Order");
+                    b.ToTable("Order", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Product", b =>
@@ -261,7 +261,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("PRODUCT_ID");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Product_Category", b =>
@@ -282,7 +282,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("PRODUCT_CATEGORY_ID");
 
-                    b.ToTable("Product_Category");
+                    b.ToTable("Product_Category", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Product_Type", b =>
@@ -302,7 +302,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("PRODUCT_TYPE_ID");
 
-                    b.ToTable("Product_Type");
+                    b.ToTable("Product_Type", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Rate", b =>
@@ -322,7 +322,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("RATE_ID");
 
-                    b.ToTable("Rate");
+                    b.ToTable("Rate", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Return", b =>
@@ -342,7 +342,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("RETURN_ID");
 
-                    b.ToTable("Return");
+                    b.ToTable("Return", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Sales", b =>
@@ -367,7 +367,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("SALE_ID");
 
-                    b.ToTable("Sales");
+                    b.ToTable("Sales", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.StockTake", b =>
@@ -386,7 +386,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("STOCKTAKE_ID");
 
-                    b.ToTable("Stocktake");
+                    b.ToTable("Stocktake", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Supplier", b =>
@@ -416,7 +416,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("SUPPLIER_ID");
 
-                    b.ToTable("Supplier");
+                    b.ToTable("Supplier", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.User", b =>
@@ -446,7 +446,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("USER_ID");
 
-                    b.ToTable("User");
+                    b.ToTable("User", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Warning", b =>
@@ -474,7 +474,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("WARNING_ID");
 
-                    b.ToTable("Warning");
+                    b.ToTable("Warning", (string)null);
                 });
 
             modelBuilder.Entity("OaSys.API.Models.Warning_Type", b =>
@@ -491,7 +491,7 @@ namespace OaSys.API.Migrations
 
                     b.HasKey("WARNING_TYPE_ID");
 
-                    b.ToTable("Warning_Type");
+                    b.ToTable("Warning_Type", (string)null);
                 });
 #pragma warning restore 612, 618
         }
